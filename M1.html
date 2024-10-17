@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch the video</title>
+    <link rel="stylesheet" href="css/newpage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<style>
+    .responsive-video {
+        width: 100%;
+        max-height:50%;
+        align-content: center; /* Keeps the aspect ratio */
+        
+    }
+    .d-grid gap-2 {
+        color: red;
+    }
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*this is machine description design */
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1, h2 {
+            color: #3498db;
+            margin-bottom: 15px;
+            transition: color 0.3s;
+        }
+
+        h1:hover, h2:hover {
+            color: #1abc9c;
+        }
+
+        p, ul {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        ul li:hover {
+            color: #2c3e50;
+        }
+
+        .highlight {
+            background-color: #eafaf1;
+            padding: 15px;
+            border-left: 5px solid #2ecc71;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1, h2 {
+                font-size: 1.2rem;
+            }
+
+            ul {
+                padding-left: 15px;
+            }
+
+            p, ul li {
+                font-size: 0.9rem;
+            }
+        }
+
+/*nav design*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+      body {
+        font-family: 'Open Sans', sans-serif;
+        background:whitesmoke;
+      }
+
+      nav {
+        position: relative;
+        margin: auto 0;
+        width: auto;
+        height: 50px;
+        background: #1c0ee2;
+        border-radius: 8px;
+        font-size: 0;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+      }
+
+      nav a {
+        font-size: 15px;
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
+        line-height: 50px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        text-align: center;
+      }
+
+      nav .animation {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        z-index: 0;
+        background: #d40d21;
+        border-radius: 8px;
+        transition: all .5s ease 0s;
+      }
+
+      nav a:nth-child(1) {
+        width: 100px;
+      }
+
+      nav .start-home, a:nth-child(1):hover~.animation {
+        width: 100px;
+        left: 0;
+      }
+
+      nav a:nth-child(2) {
+        width: 110px;
+      }
+
+      nav a:nth-child(2):hover~.animation {
+        width: 110px;
+        left: 100px;
+      }
+
+      nav a:nth-child(3) {
+        width: 100px;
+      }
+
+      nav a:nth-child(3):hover~.animation {
+        width: 100px;
+        left: 210px;
+      }
+
+      nav a:nth-child(4) {
+        width: 160px;
+      }
+
+      nav a:nth-child(4):hover~.animation {
+        width: 160px;
+        left: 310px;
+      }
+
+      nav a:nth-child(5) {
+        width: 120px;
+      }
+
+      nav a:nth-child(5):hover~.animation {
+        width: 120px;
+        left: 470px;
+      }
+
+      /* Dropdown styling */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #4f5b07;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 4px;
+      }
+
+      .dropdown-content a {
+        color: rgb(248, 248, 250);
+        padding: 10px 12px;
+        text-decoration: none;
+        display: block;
+        
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ed1313;
+      }
+
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /* Make sure the dropdown does not interfere with the animation */
+      nav .dropdown:hover~.animation {
+        width: 150px;
+        left: 470px;
+      }
+      body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Responsive table */
+        @media (max-width: 768px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            thead tr {
+                display: none;
+            }
+
+            td {
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 15px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Feature Section */
+        .feature, .technical-parameters {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .feature:hover, .technical-parameters:hover {
+            background-color: #f1f1f1;
+        }
+
+        .feature ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        /* Technical Parameters Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        /* Responsive Table */
+        @media (max-width: 768px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            thead tr {
+                display: none;
+            }
+
+            td {
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 15px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+
+        /* Responsive Feature Section */
+        @media (max-width: 768px) {
+            .feature ul {
+                padding-left: 10px;
+            }
+        }
+
+</style>
+<body>
+    <nav>
+     
+        <a href="firstpage.html">Home</a>
+        <a href="#"></a>
+        <a href="index.html">Modern Lab</a>
+        <a href="project.html">Project</a>
+        
+        <!-- Contact with dropdown -->
+        <div class="dropdown">
+          <a href="#" class="contact">Others Lab</a>
+          <div class="dropdown-content">
+            <a href="machine-list.html" style="width: 150px;">Machine Shop</a>
+            <a href="metal.html" style="width: 150px;">Metal Shop</a>
+            <a href="welding.html"style="width: 150px;">Welding Shop</a>
+            <a href="foundry.html" style="width: 150px;">Foundry Shop</a>
+            
+          </div>
+        </div>
+        
+        
+        <div class="animation start-home"></div>
+        
+      </nav>
+   
+   <!-- Responsive Video -->
+   <video class="responsive-video"  controls style="height: 900px;">
+    <source src="video/Machine-Shop/M1.mp4" type="video/mp4">
+  
+</video>
+
+    
+<h2 style="text-align: center;margin-top: 20px;color: #1c0ee2;">Z5030 Multi-Function Pillar Vertical Drilling Machine</h2> 
+<h2 style="text-align: center;margin-top: 20px;">Basic Info</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th style="color: #1c0ee2;">Model NO.</th>
+            <th style="color: #1c0ee2;">Z5030</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="Number of Shaft">Number of Shaft</td>
+            <td data-label="3">3</td>
+        </tr>
+        <tr>
+            <td data-label="Hole Diameter">Hole Diameter</td>
+            <td data-label="<50mm">< 50mm</td>
+        </tr>
+        <tr>
+            <td data-label="Automatic Grade">Automatic Grade</td>
+            <td data-label="Manual">Manual</td>
+        </tr>
+        <tr>
+            <td data-label="Precision">Precision</td>
+            <td data-label="High Precision">High Precision</td>
+        </tr>
+        <tr>
+            <td data-label="Certification">Certification</td>
+            <td data-label="GS, CE, RoHS">GS, CE, RoHS</td>
+        </tr>
+        <tr>
+            <td data-label="Condition">Condition</td>
+            <td data-label="New">New</td>
+        </tr>
+        <tr>
+            <td data-label="Max.Drilling Capacity(mm)">Max.Drilling Capacity(mm)</td>
+            <td data-label="30mm">30mm</td>
+        </tr>
+        <tr>
+            <td data-label="Max.Taping.Capacity(mm)">Max.Taping.Capacity(mm)</td>
+            <td data-label="M20">M20</td>
+        </tr>
+        <tr>
+            <td data-label="Transport Package">Transport Package</td>
+            <td data-label="Wood Case">Wood Case</td>
+        </tr>
+        <tr>
+            <td data-label="Trademark">Trademark</td>
+            <td data-label="L&T">L&T</td>
+        </tr>
+        <tr>
+            <td data-label="Origin">Origin</td>
+            <td data-label="Tengzhou China">Tengzhou China</td>
+        </tr>
+        <tr>
+            <td data-label="HS Code">HS Code</td>
+            <td data-label="8459290000">8459290000</td>
+        </tr>
+        <tr>
+            <td data-label="Production Capacity">Production Capacity</td>
+            <td data-label="200 PCS/Month">200 PCS/Month</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div class="container">
+  <h2>Feature</h2>
+  <div class="feature">
+      <p>The machine is designed with multi-function of drilling, broaching, reaming, tapping, and facing milling. With a strengthened capacity of drilling, it allows the workpieces to be drilled with a larger range of size. It is suitable for use in both production and maintenance shops:</p>
+      <ul>
+          <li>Easy operation.</li>
+          <li>Casting iron structure for long durability.</li>
+          <li>Column type of vertical drilling machine.</li>
+          <li>Worktable can rotate 180 degrees and tilt 45 degrees.</li>
+          <li>Worktable lifting by hand.</li>
+      </ul>
+  </div>
+
+  <h2>Technical Parameters</h2>
+  <div class="technical-parameters">
+      <table>
+          <thead>
+              <tr>
+                  <th style="color: #1c0ee2;">Model</th>
+                  <th style="color: #1abc9c;">Z5030</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td data-label="Max. drilling capacity(mm)">Max. drilling capacity(mm)</td>
+                  <td data-label="30">30</td>
+              </tr>
+              <tr>
+                  <td data-label="Max. taping capacity(mm)">Max. taping capacity(mm)</td>
+                  <td data-label="M20">M20</td>
+              </tr>
+              <tr>
+                  <td data-label="Distance from spindle to column(mm)">Distance from spindle to column(mm)</td>
+                  <td data-label="320">320</td>
+              </tr>
+              <tr>
+                  <td data-label="Max. distance from spindle to work table(mm)">Max. distance from spindle to work table(mm)</td>
+                  <td data-label="550">550</td>
+              </tr>
+              <tr>
+                  <td data-label="Max. distance from spindle to base(mm)">Max. distance from spindle to base(mm)</td>
+                  <td data-label="1100">1100</td>
+              </tr>
+              <tr>
+                  <td data-label="Max. spindle travel(mm)">Max. spindle travel(mm)</td>
+                  <td data-label="135">135</td>
+              </tr>
+              <tr>
+                  <td data-label="Max. travel of work table(mm)">Max. travel of work table(mm)</td>
+                  <td data-label="490">490</td>
+              </tr>
+              <tr>
+                  <td data-label="Swivel angle of table">Swivel angle of table</td>
+                  <td data-label="±45">±45</td>
+              </tr>
+              <tr>
+                  <td data-label="Tilting angle of table">Tilting angle of table</td>
+                  <td data-label="±180">±180</td>
+              </tr>
+              <tr>
+                  <td data-label="Spindle bore taper">Spindle bore taper</td>
+                  <td data-label="MT3">MT3</td>
+              </tr>
+              <tr>
+                  <td data-label="Spindle steps">Spindle steps</td>
+                  <td data-label="12">12</td>
+              </tr>
+              <tr>
+                  <td data-label="Spindle speed(r/min)">Spindle speed(r/min)</td>
+                  <td data-label="65-2600">65-2600</td>
+              </tr>
+              <tr>
+                  <td data-label="Spindle feed steps">Spindle feed steps</td>
+                  <td data-label="3">3</td>
+              </tr>
+              <tr>
+                  <td data-label="Spindle feed range(mm/r)">Spindle feed range(mm/r)</td>
+                  <td data-label="0.1,0.2,0.3">0.1, 0.2, 0.3</td>
+              </tr>
+              <tr>
+                  <td data-label="Column diameter">Column diameter</td>
+                  <td data-label="120">120</td>
+              </tr>
+              <tr>
+                  <td data-label="Effective area of table(mm)">Effective area of table(mm)</td>
+                  <td data-label="500x440">500x440</td>
+              </tr>
+              <tr>
+                  <td data-label="Effective area of base(mm)">Effective area of base(mm)</td>
+                  <td data-label="400x390">400x390</td>
+              </tr>
+              <tr>
+                  <td data-label="Main motor power (kw)">Main motor power (kw)</td>
+                  <td data-label="0.85/1.5">0.85/1.5</td>
+              </tr>
+              <tr>
+                  <td data-label="Coolant motor power(kw)">Coolant motor power(kw)</td>
+                  <td data-label="0.04">0.04</td>
+              </tr>
+              <tr>
+                  <td data-label="Packing size(cm)">Packing size(cm)</td>
+                  <td data-label="108x62x215">108x62x215</td>
+              </tr>
+              <tr>
+                  <td data-label="N.W./G.W.(kg)">N.W./G.W.(kg)</td>
+                  <td data-label="495/450">495/450</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
+    <img src="img/logo.jpg" class="rounded mx-auto d-block" id="logo"  alt="..." style="height: 150px; width: 150px; margin-top: 50px;margin-bottom: 20px;">
+    <div class="d-grid gap-2" >
+    <button onclick="window.history.back()" class="btn btn-primary" type="button" id="bt">Go Back</button></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch the video</title>
+    <link rel="stylesheet" href="css/newpage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<style>
+    .responsive-video {
+        width: 100%;
+        max-height:50%;
+        align-content: center; /* Keeps the aspect ratio */
+        
+    }
+    .d-grid gap-2 {
+        color: red;
+    }
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Table container styling */
+.table-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #333;
+    color: #fff;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 20px;
+    }
+
+    tbody td {
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+/*nav design*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+      body {
+        font-family: 'Open Sans', sans-serif;
+        background:whitesmoke;
+      }
+
+      nav {
+        position: relative;
+        margin: auto 0;
+        width: auto;
+        height: 50px;
+        background: #1c0ee2;
+        border-radius: 8px;
+        font-size: 0;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+      }
+
+      nav a {
+        font-size: 15px;
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
+        line-height: 50px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        text-align: center;
+      }
+
+      nav .animation {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        z-index: 0;
+        background: #d40d21;
+        border-radius: 8px;
+        transition: all .5s ease 0s;
+      }
+
+      nav a:nth-child(1) {
+        width: 100px;
+      }
+
+      nav .start-home, a:nth-child(1):hover~.animation {
+        width: 100px;
+        left: 0;
+      }
+
+      nav a:nth-child(2) {
+        width: 110px;
+      }
+
+      nav a:nth-child(2):hover~.animation {
+        width: 110px;
+        left: 100px;
+      }
+
+      nav a:nth-child(3) {
+        width: 100px;
+      }
+
+      nav a:nth-child(3):hover~.animation {
+        width: 100px;
+        left: 210px;
+      }
+
+      nav a:nth-child(4) {
+        width: 160px;
+      }
+
+      nav a:nth-child(4):hover~.animation {
+        width: 160px;
+        left: 310px;
+      }
+
+      nav a:nth-child(5) {
+        width: 120px;
+      }
+
+      nav a:nth-child(5):hover~.animation {
+        width: 120px;
+        left: 470px;
+      }
+
+      /* Dropdown styling */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #4f5b07;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 4px;
+      }
+
+      .dropdown-content a {
+        color: rgb(248, 248, 250);
+        padding: 10px 12px;
+        text-decoration: none;
+        display: block;
+        
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ed1313;
+      }
+
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /* Make sure the dropdown does not interfere with the animation */
+      nav .dropdown:hover~.animation {
+        width: 150px;
+        left: 470px;
+      }
+
+
+        /* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Responsive container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Specification list */
+.specs ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.specs ul li {
+    font-size: 1.2rem;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect */
+.specs ul li:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Responsive media queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .specs ul li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .specs ul li {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+</style>
+<body>
+    <nav>
+     
+        <a href="firstpage.html">Home</a>
+        <a href="#"></a>
+        <a href="index.html">Modern Lab</a>
+        <a href="project.html">Project</a>
+        
+        <!-- Contact with dropdown -->
+        <div class="dropdown">
+          <a href="#" class="contact">Others Lab</a>
+          <div class="dropdown-content">
+            <a href="machine-list.html" style="width: 150px;">Machine Shop</a>
+            <a href="metal.html" style="width: 150px;">Metal Shop</a>
+            <a href="welding.html"style="width: 150px;">Welding Shop</a>
+            <a href="foundry.html" style="width: 150px;">Foundry Shop</a>
+            
+          </div>
+        </div>
+        
+        
+        <div class="animation start-home"></div>
+        
+      </nav>
+   
+   <!-- Responsive Video -->
+   <video class="responsive-video"  controls style="height: 900px;">
+    <source src="video/M5.mp4" type="video/mp4">
+  
+</video>
+<div class="container" style="margin-top: 20px;">
+    <header>
+        <h1 style="color: #007BFF;">Device Specifications</h1>
+    </header>
+    <section class="specs">
+        <h2>Water Pump Control</h2>
+        <ul>
+            <li><strong>Base Plate:</strong> Aluminum Profile</li>
+            <li><strong>Water Chamber:</strong> Upper And Lower</li>
+            <li><strong>Water through:</strong> Solenoid Valve</li>
+            <li><strong>Water Pump:</strong> 5W</li>
+            <li><strong>Microcontroller:</strong> ATmega328</li>
+            <li><strong>Operating Voltage:</strong> 5V</li>
+            <li><strong>Input Voltage (recommended):</strong> 7-12V</li>
+            <li><strong>Input Voltage (limits):</strong> 6-20V</li>
+            <li><strong>Digital I/O Pins:</strong> 14 (of which 6 provide PWM output)</li>
+            <li><strong>Analog Input Pins:</strong> 6</li>
+            <li><strong>DC Current per I/O Pin:</strong> 40 mA</li>
+            <li><strong>DC Current for 3.3V Pin:</strong> 50 mA</li>
+            <li><strong>Flash Memory:</strong> 32 KB (ATmega328) of which 0.5 KB used by bootloader</li>
+            <li><strong>SRAM:</strong> 2 KB (ATmega328)</li>
+            <li><strong>EEPROM:</strong> 1 KB (ATmega328)</li>
+            <li><strong>Clock Speed:</strong> 16 MHz</li>
+            <li><strong>Accessory:</strong> Experimental Manual: 1 copy</li>
+            <li><strong>Connecting Cord:</strong> 1 unit</li>
+        </ul>
+    </section>
+</div>
+
+
+
+    
+<img src="img/logo.jpg" class="rounded mx-auto d-block" id="logo"  alt="..." style="height: 150px; width: 150px; margin-top: 50px;margin-bottom: 20px;">
+    <div class="d-grid gap-2" >
+    <button onclick="window.history.back()" class="btn btn-primary" type="button" id="bt">Go Back</button></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

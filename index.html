@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODERN LAB</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+       
+      
+      
+    
+</head>
+<style>
+    .button {
+  border-radius: 8px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<body>
+   
+
+    <div class="container">
+        <div class="slider">
+        <div class="slides" style="--img: url('http://amplelab.com/wp-content/uploads/2021/02/AL-511A-3-600x448.jpg')">
+            <div class="content">
+                <h2 style="color: #f4511e;">FLEXIBLE PRODUCTION LINE TRAINING SYSTEM 
+                </h2>
+                <p style="color:green;">Model- AL-511A</p>
+                <button class="button"  onclick="window.location.href='thardpage.html'"><span>Watch </span></button>
+            </div>
+
+            </div>
+            <div class="slides" style="--img: url('http://amplelab.com/wp-content/uploads/2021/02/AL-602A-1.jpg')">
+                <div class="content">
+                    <h2 style="color: #f4511e;">PNEUMATICS TRAINING SYSTEM</h2>
+                    <p style="color:rgb(20, 6, 145)">Model- PTS008</p>
+                    <button class="button"  onclick="window.location.href='newpage.html'"><span>Watch </span></button>
+                </div>
+                    
+                </div>
+                <div class="slides" style="--img: url('http://amplelab.com/wp-content/uploads/2019/02/Trainer-AL-401A.png')">
+                    <div class="content">
+                        <h2 style="color: #f4511e;">MULTIPLE PLC TRAINING</h2>
+                        <p style="color:green;">Model- PLC109</p>
+                        <button class="button"  onclick="window.location.href='secondPage.html'"><span>Watch </span></button>
+                    </div>
+                        
+                    </div>
+                    <div class="slides" style="--img: url('http://amplelab.com/wp-content/uploads/2019/02/PICK-PLACE-TRAINING-KIT.jpg')">
+                        <div class="content">
+                            <h2 style="color: #f4511e;">PICK & PLACE TRAINING KIT (USING PNEUMATIC GRIPPER)</h2>
+                            <p style="color:yellow">Model- RSM–32</p>
+                            <button class="button"  onclick="window.location.href='fourpage.html'"><span>Watch </span></button>
+                        </div>
+                            
+                        </div>
+                        <div class="slides" style="--img: url('http://amplelab.com/wp-content/uploads/2019/02/PICK-PLACE-TRAINING-KIT-2.png')">
+                            <div class="content">
+                                <h2 style="color: #f4511e;" >PICK & PLACE TRAINING KIT (USING PNEUMATIC SUCTION)</h2>
+                                <p style="color:yellow;">Model- RSM–33</p>
+                                <button class="button"  onclick="window.location.href='fivepage.html'"><span>Watch </span></button>
+                            </div>
+                                
+                            </div>
+                            <div class="slides" style="--img: url('https://lh6.googleusercontent.com/proxy/PgIgkstIEZlcvugEc2g9AHnEV8a5jzYkBRqdTU0-Uk5c0Qks9CWiFujfjW8uDM30Qoa7NGT3Sldskbjk5RGwqYsMy9pDr2NBqwArlZMTiHXVqyg-IcBy')">
+                                <div class="content">
+                                    <h2 style="color: #f4511e;">Water Pump Control</h2>
+                                    <p style="color:lightblue;">Model- RSM – 28</p>
+                                    <button class="button"  onclick="window.location.href='sixpage.html'"><span>Watch </span></button>
+                                </div>
+                                    
+                                </div>
+                                                            
+
+       </div>
+
+       
+
+        
+       <!--button working -->
+        <div class="buttons">
+            <span class="prev"></span>
+            <span class="next"></span>
+        </div>
+    </div>
+    
+
+    
+  <script>
+    let next = document.querySelector('.next');
+    let prev = document.querySelector('.prev');
+    let slider = document.querySelector('.slider');
+
+    next.addEventListener('click',function(){
+        let slides =document.querySelectorAll('.slides');
+        slider.appendChild(slides[0]);
+    })
+    prev.addEventListener('click',function(){
+        let slides =document.querySelectorAll('.slides');
+        slider.prepend(slides[slides.length -1]);
+    })
+
+  </script>  
+</body>
+</html>

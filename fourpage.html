@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch the video</title>
+    <link rel="stylesheet" href="css/newpage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<style>
+    .responsive-video {
+        width: 100%;
+        max-height:50%;
+        align-content: center; /* Keeps the aspect ratio */
+        height: 900px;
+        
+    }
+    .d-grid gap-2 {
+        color: red;
+    }
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*nav design*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+      body {
+        font-family: 'Open Sans', sans-serif;
+        background: whitesmoke;
+      }
+
+      nav {
+        position: relative;
+        margin: auto 0;
+        width: auto;
+        height: 50px;
+        background: blue;
+        border-radius: 8px;
+        font-size: 0;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+      }
+
+      nav a {
+        font-size: 15px;
+        text-transform: uppercase;
+        color: white;
+        text-decoration: none;
+        line-height: 50px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        text-align: center;
+      }
+
+      nav .animation {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        z-index: 0;
+        background: #d40d21;
+        border-radius: 8px;
+        transition: all .5s ease 0s;
+      }
+
+      nav a:nth-child(1) {
+        width: 100px;
+      }
+
+      nav .start-home, a:nth-child(1):hover~.animation {
+        width: 100px;
+        left: 0;
+      }
+
+      nav a:nth-child(2) {
+        width: 110px;
+      }
+
+      nav a:nth-child(2):hover~.animation {
+        width: 110px;
+        left: 100px;
+      }
+
+      nav a:nth-child(3) {
+        width: 100px;
+      }
+
+      nav a:nth-child(3):hover~.animation {
+        width: 100px;
+        left: 210px;
+      }
+
+      nav a:nth-child(4) {
+        width: 160px;
+      }
+
+      nav a:nth-child(4):hover~.animation {
+        width: 160px;
+        left: 310px;
+      }
+
+      nav a:nth-child(5) {
+        width: 120px;
+      }
+
+      nav a:nth-child(5):hover~.animation {
+        width: 120px;
+        left: 470px;
+      }
+
+      /* Dropdown styling */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #4f5b07;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 4px;
+      }
+
+      .dropdown-content a {
+        color: rgb(248, 248, 250);
+        padding: 10px 12px;
+        text-decoration: none;
+        display: block;
+        
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ed1313;
+      }
+
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /* Make sure the dropdown does not interfere with the animation */
+      nav .dropdown:hover~.animation {
+        width: 150px;
+        left: 470px;
+      }
+
+
+</style>
+<body>
+    <nav>
+     
+        <a href="firstpage.html">Home</a>
+        <a href="#"></a>
+        <a href="index.html">Modern Lab</a>
+        <a href="project.html">Project</a>
+        
+        <!-- Contact with dropdown -->
+        <div class="dropdown">
+          <a href="#" class="contact">Others Lab</a>
+          <div class="dropdown-content">
+            <a href="machine-list.html" style="width: 150px;">Machine Shop</a>
+            <a href="metal.html" style="width: 150px;">Metal Shop</a>
+            <a href="welding.html"style="width: 150px;">Welding Shop</a>
+            <a href="foundry.html" style="width: 150px;">Foundry Shop</a>
+            
+          </div>
+        </div>
+        
+        
+        <div class="animation start-home"></div>
+        
+      </nav>
+   
+    <!-- Responsive Video -->
+    <video class="responsive-video"  controls style="height: 900px;">
+        <source src="video/M3.mp4" type="video/mp4">
+      
+    </video>
+    <div class="container">
+        <h1 style="color:blue;">PLC Pneumatic Gripper Device</h1>
+    
+        <div class="section">
+            <h2>Description</h2>
+            <p>This device operates with a PLC and integrates distribution, transport, and carry functions. The device uses a pneumatic gripper for carrying, ensuring high efficiency and control in automation systems.</p>
+        </div>
+    
+        <div class="section">
+            <h2>Technical Parameters</h2>
+            <ul>
+                <li><strong>Base Plate:</strong> Aluminum Profile</li>
+                <li><strong>Structure:</strong> Aluminum Profile</li>
+                <li><strong>Function Indicator:</strong> Tower Type (Red, Green, Yellow)</li>
+                <li><strong>PLC:</strong> Relay Type</li>
+                <li><strong>PLC Input:</strong> 16 Nos</li>
+                <li><strong>PLC Output:</strong> 12 Nos</li>
+                <li><strong>Carry Function:</strong> Using Gripper method</li>
+                <li><strong>Pneumatic Cylinder:</strong> 03 Nos</li>
+                <li><strong>Bore Size:</strong> 10mm</li>
+                <li><strong>Stroke Length:</strong> 75mm</li>
+                <li><strong>Proximity Sensor:</strong> 01 set</li>
+                <li><strong>Pneumatic Gripper:</strong> 01 Nos, Long stroke type parallel gripper</li>
+                <li><strong>Solenoid Valve:</strong> 4 Nos</li>
+                <li><strong>Cabinet Control Circuit Power Supply:</strong> DC24V</li>
+                <li><strong>Temperature:</strong> -10°C ~ 40°C</li>
+                <li><strong>Humidity:</strong> ≤90%</li>
+                <li><strong>Max Air Pressure:</strong> 0.7Mpa</li>
+                <li><strong>Machine Capacity:</strong> ≤0.5KVA</li>
+                <li><strong>Input Power:</strong> Single-phase, three-wire AC 220V±10% 50Hz/60Hz</li>
+            </ul>
+        </div>
+    
+        <div class="section highlight">
+            <h2>Accessories</h2>
+            <ul>
+                <li>Experimental Manual: 1 copy</li>
+                <li>Connecting Cord: 1 unit</li>
+                <li>Air Compressor: 1 unit</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <img src="img/logo.jpg" class="rounded mx-auto d-block" id="logo"  alt="..." style="height: 150px; width: 150px; margin-top: 50px;margin-bottom: 50px;">
+    <div class="d-grid gap-2" >
+    <button onclick="window.history.back()" class="btn btn-primary" type="button" id="bt">Go Back</button></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODERN LAB</title>
+    <link rel="stylesheet" href="style.css">
+    
+       
+      
+      
+    
+</head>
+<style>
+    .button {
+  border-radius: 8px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<body>
+   
+
+    <div class="container">
+        <div class="slider">
+        <div class="slides" style="--img: url('https://hupshenghardware.com/wp-content/uploads/2020/08/Irwin-Record-Mechanics-Vice-1.jpg')">
+            <div class="content">
+                <h2 style="color: #f4511e;"> Mechanics Vice
+                </h2>
+                <p style="color:green;">Model- Irwin Record 4 </p>
+                <button class="button"  onclick="window.location.href='W1.html'"><span>Watch </span></button>
+            </div>
+
+            </div>
+            <div class="slides" style="--img: url('https://esmart.com.bd/wp-content/uploads/2018/07/20130827171918G6JT8SZQB2AMA_full.jpg')">
+                <div class="content">
+                    <h2 style="color: #f4511e;">Bench Grinder GB801 205mm</h2>
+                    <p style="color:rgb(20, 6, 145)">Model- GB801</p>
+                    <button class="button"  onclick="window.location.href='W2.html'"><span>Watch </span></button>
+                </div>
+                    
+                </div>
+                <div class="slides" style="--img: url('https://image.made-in-china.com/201f0j00nkhqgjSFQpbK/Integrated-Gmaw-Welding-Machine-MIG-MAG-250A-Professional-Gas-No-Gas-Welder.webp')">
+                    <div class="content">
+                        <h2 style="color: #f4511e;">Poney MIG</h2>
+                        <p style="color:green;">Model- 5300</p>
+                        <button class="button"  onclick="window.location.href='W3.html'"><span>Watch </span></button>
+                    </div>
+                        
+                    </div>
+                    <div class="slides" style="--img: url('https://image.made-in-china.com/202f0j00KQuMYmdrgEcG/Innovation-Welding-Function-Integrated-Storage-Power-Station-Instead-of-Generator-Support-Simultaneous-Use-of-Welding-Machine-and-Power-Tools.webp')">
+                        <div class="content">
+                            <h2 style="color: #f4511e;">TIG Arc Welding  </h2>
+                            <p style="color:yellow">Model- SU400</p>
+                            <button class="button"  onclick="window.location.href='W4.html'"><span>Watch </span></button>
+                        </div>
+                            
+                        </div>
+                        <div class="slides" style="--img: url('https://image.made-in-china.com/43f34j00CBAQUpOzAkWe/Inverter-DC-TIG-MMA-Welding-Machine-WS-400-.webp')">
+                            <div class="content">
+                                <h2 style="color: #f4511e;" >Inverter DC TIG/MMA Welding Machine </h2>
+                                <p style="color:yellow;">Model- (WS-400) </p>
+                                <button class="button"  onclick="window.location.href='W5.html'"><span>Watch </span></button>
+                            </div>
+                                
+                            </div>
+                            <div class="slides" style="--img: url('https://image.made-in-china.com/43f34j00HeZWoiDzYQrb/CCC-High-Quality-Inverter-Seam-Welding-Machine-Spot-Welder-Machine-Roll-Grinding.webp">
+                                <div class="content">
+                                    <h2 style="color: #f4511e;">CCC High Quality Inverter Seam Welding Machine Spot</h2>
+                                    <p style="color:lightblue;">Model- Welding</p>
+                                    <button class="button"  onclick="window.location.href='W6.html'"><span>Watch </span></button>
+                                </div>
+                                    
+                                </div>
+                                                            
+
+       </div>
+
+       
+
+        
+       <!--button working -->
+        <div class="buttons">
+            <span class="prev"></span>
+            <span class="next"></span>
+        </div>
+    </div>
+    
+
+    
+  <script>
+    let next = document.querySelector('.next');
+    let prev = document.querySelector('.prev');
+    let slider = document.querySelector('.slider');
+
+    next.addEventListener('click',function(){
+        let slides =document.querySelectorAll('.slides');
+        slider.appendChild(slides[0]);
+    })
+    prev.addEventListener('click',function(){
+        let slides =document.querySelectorAll('.slides');
+        slider.prepend(slides[slides.length -1]);
+    })
+
+  </script>  
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODERN LAB</title>
+    <link rel="stylesheet" href="style.css">
+    
+       
+      
+      
+    
+</head>
+<style>
+    .button {
+  border-radius: 8px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<body>
+   
+
+    <div class="container">
+        <div class="slider">
+        <div class="slides" style="--img: url('https://www.lzcncmachine.com/data/upload/20191113/5dcbcb47624bb.jpg')">
+            <div class="content">
+                <h2 style="color: #f4511e;">Bench Lathe Machine 
+                </h2>
+                <p style="color:green;">Model- CQ6230 </p>
+                <button class="button"  onclick="window.location.href='M6.html'"><span>Watch </span></button>
+            </div>
+
+            </div>
+            <div class="slides" style="--img: url('https://www.lksteelpipe.com/uploads/20217851/ca6266-horizontal-lathe-machine08358698458.jpg')">
+                <div class="content">
+                    <h2 style="color: #f4511e;">Horizontal Lathe Machine</h2>
+                    <p style="color:rgb(20, 6, 145)">Model- CA6266</p>
+                    <button class="button"  onclick="window.location.href='M5.html'"><span>Watch </span></button>
+                </div>
+                    
+                </div>
+                <div class="slides" style="--img: url('https://image.made-in-china.com/226f3j00NWiQvmUsABur/Z5030-Multi-Function-Pillar-Vertical-Drilling-Machine.webp')">
+                    <div class="content">
+                        <h2 style="color: #f4511e;">Multi-Function Pillar Vertical Drilling Machine</h2>
+                        <p style="color:green;">Model- Z5030</p>
+                        <button class="button"  onclick="window.location.href='M1.html'"><span>Watch </span></button>
+                    </div>
+                        
+                    </div>
+                    <div class="slides" style="--img: url('https://www.lzcncmachine.com/data/upload/20240106/6598ab9c926c5.jpg')">
+                        <div class="content">
+                            <h2 style="color: #f4511e;">Vertical Milling Machine </h2>
+                            <p style="color:yellow">Model- X5036B</p>
+                            <button class="button"  onclick="window.location.href='M2.html'"><span>Watch </span></button>
+                        </div>
+                            
+                        </div>
+                        <div class="slides" style="--img: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlgdZmC-mPVdIkmNMIZR5x1X9P1CJOALPpSw&s')">
+                            <div class="content">
+                                <h2 style="color: #f4511e;" >Metal Shaper Machine</h2>
+                                <p style="color:yellow;">Model- BC6085 </p>
+                                <button class="button"  onclick="window.location.href='M3.html'"><span>Watch </span></button>
+                            </div>
+                                
+                            </div>
+                            <div class="slides" style="--img: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLWMbclxaNCnZ1qmNZJu81dvI8EtniNaWC3g&s">
+                                <div class="content">
+                                    <h2 style="color: #f4511e;">Electric Surface Grinding Machine</h2>
+                                    <p style="color:lightblue;">Model- MD820</p>
+                                    <button class="button"  onclick="window.location.href='M4.html'"><span>Watch </span></button>
+                                </div>
+                                    
+                                </div>
+                                                            
+
+       </div>
+
+       
+
+        
+       <!--button working -->
+        <div class="buttons">
+            <span class="prev"></span>
+            <span class="next"></span>
+        </div>
+    </div>
+    
+
+    
+  <script>
+    let next = document.querySelector('.next');
+    let prev = document.querySelector('.prev');
+    let slider = document.querySelector('.slider');
+
+    next.addEventListener('click',function(){
+        let slides =document.querySelectorAll('.slides');
+        slider.appendChild(slides[0]);
+    })
+    prev.addEventListener('click',function(){
+        let slides =document.querySelectorAll('.slides');
+        slider.prepend(slides[slides.length -1]);
+    })
+
+  </script>  
+</body>
+</html>
